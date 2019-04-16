@@ -21,6 +21,8 @@
 #include "gpiointerrupt.h"
 #include "ustimer.h"
 
+#include "app-config.h"
+
 #include "ezradiodrv_config.h"
 #include "ezradio_hal.h"
 #include "ezradio_comm.h"

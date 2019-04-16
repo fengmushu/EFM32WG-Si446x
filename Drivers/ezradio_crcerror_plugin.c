@@ -18,6 +18,8 @@
 #include <stddef.h>
 #include "em_device.h"
 
+#include "app-config.h"
+
 #include "ezradio_cmd.h"
 #include "ezradio_prop.h"
 #include "ezradio_api_lib.h"

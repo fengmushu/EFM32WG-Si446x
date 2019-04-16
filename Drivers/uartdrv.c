@@ -14,6 +14,7 @@
  * sections of the MSLA applicable to Source Code.
  *
  ******************************************************************************/
+#if 0
 #include <string.h>
 
 #include "uartdrv.h"
@@ -2493,3 +2494,4 @@ Ecode_t UARTDRV_TransmitB(UARTDRV_Handle_t handle,
 
  * @} end group UARTDRV *******************************************************
  * @} end group emdrv *********************************************************/
+#endif

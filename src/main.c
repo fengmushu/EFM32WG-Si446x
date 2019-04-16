@@ -10,6 +10,7 @@
 #include "rtcdriver.h"
 #include "spidrv.h"
 #include "bsp.h"
+#include "retargetserial.h"
 //#include "bsp_trace.h"
 
 #include "ezradio_cmd.h"
@@ -171,8 +172,12 @@ int main(void)
   /* Chip errata */
   CHIP_Init();
 
+  /* re-target serial */
+  RETARGET_SerialInit();
+  RETARGET_SerialCrLf(1);
+
   /* If first word of user data page is non-zero, enable Energy Profiler trace */
-//  BSP_TraceProfilerSetup();
+  // BSP_TraceProfilerSetup();
 
   /* HFXO 48MHz, divided by 1 */
   CMU_ClockSelectSet(cmuClock_HF, cmuSelect_HFXO);
@@ -185,7 +190,7 @@ int main(void)
 
   /* Initialize LED driver */
   BSP_LedsInit();
-  /* Setting state of leds*/
+  /* Setting state of leds */
   BSP_LedSet(0);
   BSP_LedSet(1);
 
@@ -201,7 +206,7 @@ int main(void)
   }
 
   /* Print header */
-  printf("\n\n\n\n\n\n\n\n  EZRadio Simple TRx\n");
+  printf("EZRadio Simple TRx\n");
 
 #if (defined EZRADIO_PLUGIN_TRANSMIT)
   /* Configure packet transmitted callback. */
@@ -266,6 +271,7 @@ int main(void)
           radioTxPkt[APP_PKT_DATA_START + 1] = (uint8_t)( ((uint16_t)appDataCntr) & 0x00FF);
 
           /* Transmit packet */
+          // ezradioStartTransmitBasic(appRadioHandle, 8, radioTxPkt);
           ezradioStartTransmitDefault(appRadioHandle, radioTxPkt);
 
           printf("<--Data TX: %05d\n", appDataCntr);

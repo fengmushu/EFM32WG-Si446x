@@ -23,6 +23,8 @@
 #include "gpiointerrupt.h"
 #include "ustimer.h"
 
+#include "app-config.h"
+
 #include "ezradio_cmd.h"
 #include "ezradio_prop.h"
 #include "ezradio_hal.h"
@@ -118,9 +120,12 @@ Ecode_t ezradioPluginManager(EZRADIODRV_Handle_t radioHandle)
   }
 
   /* Check is radio interrupt is received. */
-  if (ezradioIrqReceived) {
-    /* Accept interrupt before clearing IT in the radio, so prevent race conditions. */
-    ezradioIrqReceived = false;
+  /* ROY: TX timout NO interruput */ 
+  // if (ezradioIrqReceived)
+  {
+
+	/* Accept interrupt before clearing IT in the radio, so prevent race conditions. */
+	ezradioIrqReceived = false;
 
     /* Read ITs, clear all pending ones */
     ezradio_get_int_status(0x0, 0x0, 0x0, radioReplyHandle);

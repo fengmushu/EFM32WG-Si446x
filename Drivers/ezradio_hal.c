@@ -24,6 +24,8 @@
 #include "spidrv.h"
 #include "gpiointerrupt.h"
 
+#include "app-config.h"
+
 #include "ezradiodrv_config.h"
 #include "ezradio_hal.h"
 

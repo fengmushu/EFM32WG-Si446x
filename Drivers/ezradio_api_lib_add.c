@@ -14,12 +14,13 @@
  * sections of the MSLA applicable to Source Code.
  *
  ******************************************************************************/
-
 #include <stddef.h>
 #include <stdint.h>
 #include <stdarg.h>
 #include "em_gpio.h"
 #include "gpiointerrupt.h"
+
+#include "app-config.h"
 
 #include "ezradio_cmd.h"
 #include "ezradio_prop.h"
@@ -27,8 +28,6 @@
 #include "ezradio_hal.h"
 #include "ezradio_api_lib.h"
 #include "ezradio_api_lib_add.h"
-
-#include "app-config.h"
 
 /**
  * This function is used to load all properties and commands with a list of NULL terminated commands.
