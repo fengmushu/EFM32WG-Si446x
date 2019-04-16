@@ -8,17 +8,32 @@
     <property object="EMU" propertyId="ABPeripheral.included" value="true"/>
     <property object="EXTFLASH" propertyId="ABPeripheral.included" value="true"/>
     <property object="GPIO" propertyId="ABPeripheral.included" value="true"/>
+    <property object="GPIO" propertyId="GPIO.BSP_TRACE_SWO.PIN" value="PF2"/>
     <property object="LED" propertyId="ABPeripheral.included" value="true"/>
+    <property object="LEUART0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="LEUART0" propertyId="LEUART.BSP_LEUART_RX.PIN" value="PD5"/>
+    <property object="LEUART0" propertyId="LEUART.BSP_LEUART_TX.PIN" value="PD4"/>
+    <property object="PF2" propertyId="ports.settings.custompinname" value=""/>
+    <property object="PORTIO" propertyId="portio.gpio.enable.swo" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.leuart0.enable.rx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.leuart0.enable.tx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.uart0.enable.rx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.uart0.enable.tx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.uart0.location.uart0" value="1"/>
+    <property object="PORTIO" propertyId="portio.usart1.location.usart1" value="2"/>
     <property object="SERIAL" propertyId="ABPeripheral.included" value="true"/>
     <property object="TIMER0" propertyId="ABPeripheral.included" value="true"/>
     <property object="TIMER1" propertyId="ABPeripheral.included" value="true"/>
     <property object="TIMER2" propertyId="ABPeripheral.included" value="true"/>
     <property object="TIMER3" propertyId="ABPeripheral.included" value="true"/>
     <property object="UART0" propertyId="ABPeripheral.included" value="true"/>
-    <property object="UART1" propertyId="ABPeripheral.included" value="true"/>
-    <property object="USART0" propertyId="ABPeripheral.included" value="true"/>
-    <property object="USART1" propertyId="ABPeripheral.included" value="true"/>
-    <property object="USART2" propertyId="ABPeripheral.included" value="true"/>
+    <property object="UART0" propertyId="UART.BSP_UART_RX.PIN" value="PE1"/>
+    <property object="UART0" propertyId="UART.BSP_UART_TX.PIN" value="PE0"/>
+    <property object="UART0" propertyId="UART.customname.STRING" value="console"/>
+    <property object="USART0" propertyId="USART.BSP_USART_MISO.PIN" value="PC1"/>
+    <property object="USART0" propertyId="USART.BSP_USART_MOSI.PIN" value="PC0"/>
+    <property object="USART1" propertyId="USART.BSP_USART_MISO.PIN" value="PD6"/>
+    <property object="USART1" propertyId="USART.BSP_USART_MOSI.PIN" value="PD7"/>
     <property object="WDOG" propertyId="ABPeripheral.included" value="true"/>
   </mode>
   <modeTransition>
